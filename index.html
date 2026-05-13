@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المراجعة النهائية - مهارات التفاوض</title>
+    <!-- Google Fonts for Modern Arabic Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Dynamic Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <header class="glass-header">
+        <div class="header-content">
+            <h1 class="main-title">المراجعة النهائية - مهارات التفاوض</h1>
+            <p class="sub-title">Negotiation Skills - MGT201</p>
+            <div class="credits">
+                <span>بصناعة <strong>البشمهندس أشرووووف ☑️</strong></span>
+                <span class="divider">•</span>
+                <span>جامعة العلمين الدولية - AIU</span>
+            </div>
+        </div>
+        <div class="theme-toggle">
+            <button id="themeToggleBtn" aria-label="Toggle Theme">
+                <svg class="moon-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                <svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" style="display: none;"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.32a1 1 0 011.415 0l.708.708a1 1 0 01-1.414 1.414l-.708-.708a1 1 0 010-1.414zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zm-1.32 4.22a1 1 0 010 1.415l-.708.708a1 1 0 01-1.414-1.414l.708-.708a1 1 0 011.415 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4.22-1.32a1 1 0 010-1.415l-.708-.708a1 1 0 01-1.414 1.414l.708.708a1 1 0 011.415 0zM2 10a1 1 0 011-1h1a1 1 0 110 2H3a1 1 0 01-1-1zm1.32-4.22a1 1 0 011.415 0l-.708.708a1 1 0 01-1.414-1.414l.708-.708z" clip-rule="evenodd"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Navigation Tabs -->
+        <nav class="tabs-nav glass-panel">
+            <button class="tab-btn active" data-target="section1">
+                <span class="tab-icon">✨</span>
+                <span class="tab-text">أسئلة الدكتور</span>
+            </button>
+            <button class="tab-btn" data-target="section2">
+                <span class="tab-icon">📝</span>
+                <span class="tab-text">بنك الاختياري</span>
+                <span class="badge">100</span>
+            </button>
+            <button class="tab-btn" data-target="section3">
+                <span class="tab-icon">✅</span>
+                <span class="tab-text">الصح والخطأ</span>
+                <span class="badge">50</span>
+            </button>
+            <button class="tab-btn" data-target="section4">
+                <span class="tab-icon">⚡</span>
+                <span class="tab-text">بصمجة الاختياري</span>
+            </button>
+            <button class="tab-btn" data-target="section5">
+                <span class="tab-icon">🎯</span>
+                <span class="tab-text">بصمجة الصح والخطأ</span>
+            </button>
+            <button class="tab-btn quiz-tab-btn" data-target="section6">
+                <span class="tab-icon">🏆</span>
+                <span class="tab-text">اختبر نفسك</span>
+            </button>
+        </nav>
+
+        <!-- Content Sections -->
+        <div class="sections-wrapper">
+            <!-- Section 1 -->
+            <section id="section1" class="content-section active">
+                <div class="section-header">
+                    <h2>أسئلة الدكتور الأصلية</h2>
+                    <p>أهم الأسئلة الواردة من الدكتور مع تفسيرها</p>
+                </div>
+                <div class="cards-grid" id="grid-section1"></div>
+            </section>
+
+            <!-- Section 2 -->
+            <section id="section2" class="content-section">
+                <div class="section-header">
+                    <h2>بنك الأسئلة الاختيارية (MCQ)</h2>
+                    <p>مائة سؤال اختياري شاملة المنهج</p>
+                    <div class="search-bar">
+                        <input type="text" id="search-mcq" placeholder="ابحث في الأسئلة...">
+                    </div>
+                </div>
+                <div class="cards-grid" id="grid-section2"></div>
+            </section>
+
+            <!-- Section 3 -->
+            <section id="section3" class="content-section">
+                <div class="section-header">
+                    <h2>بنك أسئلة الصح والخطأ</h2>
+                    <p>خمسون سؤال صح وخطأ مع التعليل</p>
+                    <div class="search-bar">
+                        <input type="text" id="search-tf" placeholder="ابحث في الأسئلة...">
+                    </div>
+                </div>
+                <div class="cards-grid" id="grid-section3"></div>
+            </section>
+
+            <!-- Section 4 -->
+            <section id="section4" class="content-section">
+                <div class="section-header">
+                    <h2>بصمجة الاختياري (قواعد ذهبية)</h2>
+                    <p>مفاتيح سريعة لحل أسئلة الاختياري في ثوانٍ</p>
+                </div>
+                <div class="tricks-list" id="list-section4"></div>
+            </section>
+
+            <!-- Section 5 -->
+            <section id="section5" class="content-section">
+                <div class="section-header">
+                    <h2>بصمجة الصح والخطأ (قواعد ذهبية)</h2>
+                    <p>مفاتيح سريعة لحل أسئلة الصح والخطأ</p>
+                </div>
+                <div class="tricks-list" id="list-section5"></div>
+            </section>
+
+            <!-- Section 6: Quiz -->
+            <section id="section6" class="content-section">
+                <div class="section-header">
+                    <h2>اختبر نفسك 🏆</h2>
+                    <p>قم بتوليد اختبار مخصص لتقييم مستواك</p>
+                </div>
+                
+                <!-- Setup Screen -->
+                <div id="quiz-setup" class="quiz-box glass-panel">
+                    <h3>إعدادات الاختبار</h3>
+                    <div class="setup-form">
+                        <div class="input-group">
+                            <label>أسئلة الاختياري (MCQ)</label>
+                            <input type="number" id="mcq-count" min="0" max="100" value="10">
+                        </div>
+                        <div class="input-group">
+                            <label>أسئلة الصح والخطأ (T/F)</label>
+                            <input type="number" id="tf-count" min="0" max="50" value="10">
+                        </div>
+                    </div>
+                    <div class="error-msg" id="quiz-error" style="display: none; color: var(--danger); margin-top: 10px; font-weight: bold;">الحد الأقصى لمجموع الأسئلة هو 100 سؤال. تأكد من الأرقام!</div>
+                    <button id="start-quiz-btn" class="primary-btn">ابدأ الاختبار الآن 🚀</button>
+                </div>
+
+                <!-- Active Quiz Screen -->
+                <div id="active-quiz" style="display: none;">
+                    <div id="quiz-questions-container" class="quiz-questions-list"></div>
+                    <div class="quiz-actions">
+                        <button id="submit-quiz-btn" class="primary-btn submit-btn">إنهاء الاختبار وعرض النتيجة 🎯</button>
+                    </div>
+                </div>
+
+                <!-- Result Screen -->
+                <div id="quiz-result" class="quiz-box glass-panel result-box" style="display: none;">
+                    <h3>النتيجة النهائية</h3>
+                    <div class="score-circle">
+                        <span id="score-display">0%</span>
+                    </div>
+                    <p id="score-message" class="score-message"></p>
+                    <p id="score-details" class="score-details"></p>
+                    <button id="restart-quiz-btn" class="primary-btn">إجراء اختبار جديد 🔄</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-dua">
+            <p class="dua-title">﷽</p>
+            <p>اللهم إني استودعك ما قرأت وما حفظت وما تعلمت، فرده عند حاجتي إليه إنك على كل شيء قدير</p>
+        </div>
+        <p class="footer-copy">صُنع بحب للدفعة ❤️ - بالتوفيق للجميع</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
